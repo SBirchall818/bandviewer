@@ -1,0 +1,20 @@
+{
+  "name": "bandviwer",
+  "version": "1.0.0",
+  "description": "Quick SPA to let you view bands",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "keywords": [
+    "Album",
+    "Music",
+    "Band",
+    "Viewer"
+  ],
+  "author": "SBirchall",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}

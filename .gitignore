@@ -1,0 +1,8 @@
+# Express launch file because it is different
+/index.ts
+
+#Comment line
+/bower_components/**
+/build/**
+/node_modules/**
+/typings/**

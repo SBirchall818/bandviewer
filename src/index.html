@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Band Page</title>
+        <base href="/">
+    </head>
+    <body>
+        Hello Band Page Edit 2 I love eggs
+        
+        <div ng-app="app">
+            <div ng-view>
+                
+            </div>
+        </div>
+        
+        <a href="#!/View1">View 1</a>
+        <a href="#!/View2">View 2</a>
+        
+        <!--Dependencies-->
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+        
+        <!-- App Scripts -->
+        <script src="/build/app/app.module.js"></script>
+        <script src="/build/app/app.routes.js"></script>
+        <script src="/build/app/app.run.js"></script>
+    </body>
+</html>

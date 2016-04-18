@@ -1,0 +1,24 @@
+{
+  "name": "bandviewer",
+  "description": "Quick SPA to let you view bands",
+  "main": "index.js",
+  "authors": [
+    "SBirchall"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Album",
+    "Music",
+    "Band",
+    "Viewer"
+  ],
+  "homepage": "src/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

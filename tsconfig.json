@@ -1,0 +1,52 @@
+/*
+// The Exclude pattern for tsconfig files
+// This does not play well will typings packages because of the error described
+// here "https://github.com/Microsoft/TypeScript/issues/1039"
+// If I weren't using typings packages then this would make life easier because
+// all ts files would get transpiled without me having to specifically name
+// them.
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "build/",
+        "sourceMap": true
+    },
+    "filesGlob":[
+        "typings/main.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ]
+}
+*/
+/*
+// The "include files" pattern for tsconfig.
+// This prevents cylomatic duplication errors when using typings packagaes
+// But does make life a ball ache because you have to add every ts file to
+// the list
+*/
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        /*"outFile": "../../built/local/tsc.js",*/
+        "outDir": "build/",
+        "sourceMap": true
+    },
+    "files": [
+        /* src */
+        "src/app/app.module.ts",
+        "src/app/app.routes.ts",
+        "src/app/app.run.ts",
+        "src/music/music.ts"
+        /* spec */
+        // "spec/app/app.ts",
+        // "spec/music/music.ts"
+    ]
+}
