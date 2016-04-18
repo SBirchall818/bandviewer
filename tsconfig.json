@@ -37,14 +37,17 @@
         "preserveConstEnums": true,
         /*"outFile": "../../built/local/tsc.js",*/
         "outDir": "build/",
-        "sourceMap": true
+        "sourceMap": false
     },
     "files": [
         /* src */
         "src/app/app.module.ts",
         "src/app/app.routes.ts",
         "src/app/app.run.ts",
-        "src/music/music.ts"
+        "src/app/nameCtrl.ts",
+        "src/music/music.ts",
+        "src/filmsearch/filmsearch.controller.ts",
+        "src/filmsearch/filmsearch.service.ts"
         /* spec */
         // "spec/app/app.ts",
         // "spec/music/music.ts"

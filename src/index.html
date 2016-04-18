@@ -11,6 +11,16 @@
             <div ng-view>
                 
             </div>
+            
+            <div ng-controller="NameCtrl">
+                <ul>
+                    <li ng-repeat="name in names">{{name}}</li>
+                </ul>
+                <form ng-submit="events.addName()">
+                    <input type="text" ng-model="enteredName">
+                    <input type="submit" value="add">
+                </form>
+            </div>
         </div>
         
         <a href="#!/View1">View 1</a>
@@ -23,6 +33,9 @@
         <!-- App Scripts -->
         <script src="/build/app/app.module.js"></script>
         <script src="/build/app/app.routes.js"></script>
+        <script src="/build/app/nameCtrl.js"></script>
+        <!--<script src="/build/filmsearch/filmsearch.service.js"></script>
+        <script src="/build/filmsearch/filmsearch.controller.js"></script>-->
         <script src="/build/app/app.run.js"></script>
     </body>
 </html>
