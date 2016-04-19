@@ -1,45 +1,52 @@
-// /// <reference path="../../typings/main.d.ts" />
-// /// <reference path="filmsearch.service.ts" />
+/// <reference path="../../typings/main.d.ts" />
+/// <reference path="filmsearch.service.ts" />
+/// <reference path="queryResponse.ts" />
 
-// module filmsearch{
-//     'use strict';
+module filmsearch{
+    'use strict';
     
-//     interface IFilmsearchScope{
-//         $scope: ng.IScope,
-//         results: string[];
-//         search(filmname: string): void;
-//     }
+    interface IFilmsearchScope extends ng.IScope{
+        $scope: ng.IScope,
+        results: string[];
+        search(filmname: string): void;
+        events: FilmsearchController;
+    }
     
-//     class FilmsearchController implements IFilmsearchScope{
-//         results: string[];
+    class FilmsearchController{
+        scope: IFilmsearchScope;
+        filmsearchService: IFilmsearchService;
         
-//         queryname: string = 'Default Query Name';
+        results: string[];
         
-//         static $inject = [
-//             '$scope',
-//             'filmsearch.service'];
+        queryname: string = 'Default Query Name';
         
-//         constructor(
-//             public $scope: ng.IScope,
-//             private filmsearchService: IFilmsearchService){
-//             var vm = this;
-//             vm.results = [];
-//             vm.click = this.click;
-//         }
+        static $inject = [
+            '$scope',
+            'filmsearch.service'];
         
-//         search(filmname: string){
-//             this.filmsearchService.search(filmname)
-//                 .then((): void =>{
-//                     this.results.push('Example result');
-//                 })
-//         }
+        constructor(
+            $scope: IFilmsearchScope,
+            _filmsearchService_: IFilmsearchService){
+            this.scope = $scope;
+            this.filmsearchService = _filmsearchService_;
+            $scope.events = this;            
+            
+            $scope.results = ['Fake A', 'Fake B'];            
+        }
         
-//         click(){
-//             console.log('Click registered');
-//         }
-//     }
+        search(filmname: string){
+            this.filmsearchService.search(filmname)
+                .then((response: QueryResponse): void =>{
+                    this.scope.results.push(response.Language);
+                })
+        }
+        
+        click(){
+            console.log('Click registered');
+        }
+    }
     
-//     angular
-//         .module('app')
-//         .controller('filmsearchController', FilmsearchController);
-// }
+    angular
+        .module('app')
+        .controller('filmsearchController', FilmsearchController);
+}

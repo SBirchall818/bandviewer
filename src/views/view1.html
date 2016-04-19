@@ -1,7 +1,10 @@
 <div>This is view 1</div>
-<!--<div ng-controller="filmsearchController">
-    <form ng-submit="search()">
+<div ng-controller="filmsearchController">
+    <form ng-submit="events.search()">
         <input ng-model="queryname" type="text" placeholder="Film name"/>
-        <button ng-click="click()" >Ok</button>
+        <button ng-click="events.click()" >Ok</button>
     </form>
-</div>-->
+    <ui>
+        <li ng-repeat="r in results">{{r}}</li>
+    </ui>
+</div>

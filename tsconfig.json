@@ -47,7 +47,8 @@
         "src/app/nameCtrl.ts",
         "src/music/music.ts",
         "src/filmsearch/filmsearch.controller.ts",
-        "src/filmsearch/filmsearch.service.ts"
+        "src/filmsearch/filmsearch.service.ts",
+        "src/filmsearch/queryResponse.ts"
         /* spec */
         // "spec/app/app.ts",
         // "spec/music/music.ts"
