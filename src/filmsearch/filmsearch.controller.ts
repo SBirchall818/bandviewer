@@ -5,7 +5,7 @@
 module filmsearch{
     'use strict';
     
-    interface IFilmsearchScope extends ng.IScope{
+    export interface IFilmsearchScope extends ng.IScope{
         $scope: ng.IScope,
         results: string[];
         search(filmname: string): void;

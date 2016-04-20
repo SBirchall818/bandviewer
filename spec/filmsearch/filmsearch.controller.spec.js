@@ -1,5 +1,7 @@
 describe('filmsearch controller', function(){
     
+    var $scope;
+    
     beforeEach(module('app'));
     
     beforeEach(inject(function(_$controller_) {
