@@ -29,5 +29,5 @@ module filmsearch{
     
     angular
         .module('app')
-        .service('filmsearch.service', FilmsearchService);
+        .service('filmsearchservice', FilmsearchService);
 }

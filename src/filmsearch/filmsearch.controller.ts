@@ -22,7 +22,7 @@ module filmsearch{
         
         static $inject = [
             '$scope',
-            'filmsearch.service'];
+            'filmsearchservice'];
         
         constructor(
             $scope: IFilmsearchScope,
