@@ -1,1 +1,12 @@
 <div>This is view 2</div>
+<div ng-controller="posterController">
+    <input type="text" ng-model="url" placeholder="Poster Url"/>
+    <button ng-click="events.click()">Show Poster</button>
+    <div ng-show="display">
+        <h1>Revealed Text</h1>
+        Url Looked up {{url}}
+        <div ng-if="display">
+            <img ng-src="{{url}}" height="200" width="200"/>
+        </div>
+    </div>
+</div>
