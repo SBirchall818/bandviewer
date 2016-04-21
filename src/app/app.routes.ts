@@ -19,6 +19,8 @@ module app{
             // template: '<div>This is view 2</div>',
             // controller: (): void => {},
             // controllerAs: 'vm'
+        }).when('/View3', {
+            templateUrl: '../../views/view3.html'
         });
         
         $locationProvider.html5Mode(false);
