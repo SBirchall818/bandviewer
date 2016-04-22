@@ -51,7 +51,8 @@
         "src/filmsearch/poster.controller.ts",
         "src/filmsearch/queryResponse.ts",        
         /* spec */
-        "spec/filmsearch/filmsearch.controller.spec.ts"
-        // "spec/music/music.ts"
+        "spec/filmsearch/filmsearch.controller.spec.ts",
+        /* widgets */
+        "src/widgets/birdchooser/birdchooser.directive.ts"
     ]
 }
