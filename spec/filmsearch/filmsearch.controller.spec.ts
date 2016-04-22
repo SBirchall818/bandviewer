@@ -7,7 +7,7 @@ describe('filmsearch controller', () => {
     beforeEach(/*ng.mock.*/module('app'));
     
     beforeEach(inject(function(_$controller_: ng.IControllerService) {
-        $scope = {};
+        $scope = <filmsearch.IFilmsearchScope>{};
         _$controller_('filmsearchController', {
             $scope: $scope
         });
