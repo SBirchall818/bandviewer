@@ -4,5 +4,8 @@
 </ul>
 <div class="birdcontainer">
     <span class="fixedheight" ></span>
-    <img ng-repeat="url in urls" ng-src="{{url}}" class="birdimg" />
+    <img ng-repeat="bird in birds track by $index" ng-src="{{bird.url}}" class="birdimg" ng-click="picclick($index)"/>
+</div>
+<div>
+    {{text}}
 </div>

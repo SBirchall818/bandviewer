@@ -53,6 +53,7 @@
         /* spec */
         "spec/filmsearch/filmsearch.controller.spec.ts",
         /* widgets */
-        "src/widgets/birdchooser/birdchooser.directive.ts"
+        "src/widgets/birdchooser/birdchooser.directive.ts",
+        "src/widgets/birdchooser/bird.ts"
     ]
 }
