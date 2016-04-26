@@ -1,1 +1,8 @@
 <h1>The bird chooser</h1>
+<ul ng-show="debug">
+    <li ng-repeat="item in urls">{{item}}</li>
+</ul>
+<div class="birdcontainer">
+    <span class="fixedheight" ></span>
+    <img ng-repeat="url in urls" ng-src="{{url}}" class="birdimg" />
+</div>

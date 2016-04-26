@@ -1,0 +1,31 @@
+.birdimg {
+    transition: height 0.4s ease-out, width 0.4s ease-out;
+    
+    height: 100px;
+    width: 100px;
+    
+    padding: 10px;   
+}
+
+.birdimg:hover{
+    transition: height 0.4s ease-out, width 0.4s ease-out;
+    
+    height: 150px;
+    width: 150px;
+}
+
+.birdcontainer{    
+    /*min-height: 400px;*/
+    margin: 0 0 50px 0;
+    padding: 10px;
+    background: green;
+    white-space: nowrap;
+}
+
+.birdcontainer > *{
+    vertical-align: top
+}
+
+fixedheight{
+    min-height: 200px;
+}
